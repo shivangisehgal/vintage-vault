@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+}
+
+.card-wrapper {
+  flex: 1 1 calc(33.333% - 32px); /* Three cards per row with some gap */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.card-wrapper img {
+  width: 100%; /* Ensure the image takes full width of the card */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-wrapper {
+    flex: 1 1 calc(50% - 32px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex: 1 1 calc(100% - 32px); /* One card per row on smaller screens */
+  }
+}
